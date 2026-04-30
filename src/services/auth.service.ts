@@ -1,5 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
-import { lovable } from "@/integrations/Integrate";
+import { lovable } from "@/integrations/lovable";
 
 export const authService = {
   async signUp(email: string, password: string, displayName: string) {

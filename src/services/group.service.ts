@@ -3,6 +3,7 @@ import type { Group, GroupMember, Profile } from "@/types";
 
 export const groupService = {
   async listMyGroups(): Promise<Group[]> {
+    // eslint-disable-next-line prettier/prettier
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return [];
     // RLS limits this to groups I'm a member of
